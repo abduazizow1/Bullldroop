@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Profil — DropZone</title>
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+</head>
+
+<body>
+
+  <aside class="sidebar">
+
+    <div class="logo">
+      DROP<span>ZONE</span>
+    </div>
+
+    <nav>
+
+      <a href="index.html" class="nav-item">
+        🏠 Bosh sahifa
+      </a>
+
+      <a href="keys.html" class="nav-item">
+        🎁 Keyslar
+      </a>
+
+      <a href="index.html#games" class="nav-item">
+        🎮 O‘yinlar
+      </a>
+
+      <a href="index.html#bonuses" class="nav-item">
+        🎯 Bonuslar
+      </a>
+
+      <a href="profile.html" class="nav-item active">
+        👤 Profil
+      </a>
+
+    </nav>
+
+  </aside>
+
+
+  <main class="main">
+
+    <header class="header">
+
+      <a href="index.html" class="mobile-logo">
+        DROP<span>ZONE</span>
+      </a>
+
+      <div class="header-right">
+
+        <div class="balance">
+          <span>Balans</span>
+
+          <b id="balance">
+            125 000 UZS
+          </b>
+        </div>
+
+        <button
+          class="deposit"
+          onclick="addDemoBalance()"
+        >
+          + To‘ldirish
+        </button>
+
+      </div>
+
+    </header>
+
+
+    <div class="content">
+
+      <section class="section">
+
+        <div class="section-header">
+
+          <div>
+
+            <small>
+              SHAXSIY KABINET
+            </small>
+
+            <h2>
+              Mening profilim
+            </h2>
+
+          </div>
+
+        </div>
+
+
+        <div class="profile-page">
+
+          <div class="profile-main-card">
+
+            <div class="large-avatar" id="avatar">
+              DZ
+            </div>
+
+            <div>
+
+              <h2 id="name">
+                Demo User
+              </h2>
+
+              <p id="email">
+                demo@example.com
+              </p>
+
+              <span class="profile-status">
+                ✓ Tasdiqlangan
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <div class="profile-stat-grid">
+
+            <div class="stat-card">
+
+              <span>
+                Balans
+              </span>
+
+              <strong id="profileBalance">
+                125 000 UZS
+              </strong>
+
+            </div>
+
+
+            <div class="stat-card">
+
+              <span>
+                Xaridlar
+              </span>
+
+              <strong>
+                24
+              </strong>
+
+            </div>
+
+
+            <div class="stat-card">
+
+              <span>
+                Bonuslar
+              </span>
+
+              <strong>
+                8
+              </strong>
+
+            </div>
+
+
+            <div class="stat-card">
+
+              <span>
+                Reyting
+              </span>
+
+              <strong>
+                4.9
+              </strong>
+
+            </div>
+
+          </div>
+
+
+          <div class="profile-main-card history">
+
+            <div>
+
+              <h3>
+                So‘nggi faoliyat
+              </h3>
+
+              <p>
+                Xaridlar va hisobdagi o‘zgarishlar.
+              </p>
+
+            </div>
+
+            <div class="history-item">
+
+              <span>
+                🎁 Starter Box
+              </span>
+
+              <b>
+                -15 000 UZS
+              </b>
+
+            </div>
+
+            <div class="history-item">
+
+              <span>
+                🎯 Daily Bonus
+              </span>
+
+              <b class="positive">
+                +5 000 UZS
+              </b>
+
+            </div>
+
+            <div class="history-item">
+
+              <span>
+                💳 Hisob to‘ldirildi
+              </span>
+
+              <b class="positive">
+                +50 000 UZS
+              </b>
+
+            </div>
+
+          </div>
+
+
+          <button
+            class="logout-button"
+            onclick="logout()"
+          >
+            Chiqish
+          </button>
+
+        </div>
+
+      </section>
+
+    </div>
+
+  </main>
+
+
+  <script>
+
+    const savedName =
+      localStorage.getItem("dropzone_name");
+
+    const savedEmail =
+      localStorage.getItem("dropzone_user");
+
+    const savedBalance =
+      localStorage.getItem("dropzone_balance");
+
+
+    if (savedName) {
+
+      document
+        .getElementById("name")
+        .textContent = savedName;
+
+      document
+        .getElementById("avatar")
+        .textContent =
+        savedName
+          .substring(0, 2)
+          .toUpperCase();
+
+    }
+
+
+    if (savedEmail) {
+
+      document
+        .getElementById("email")
+        .textContent =
+        savedEmail;
+
+    }
+
+
+    if (savedBalance) {
+
+      const formatted =
+        Number(savedBalance)
+          .toLocaleString("uz-UZ") +
+        " UZS";
+
+      document
+        .getElementById("balance")
+        .textContent = formatted;
+
+      document
+        .getElementById("profileBalance")
+        .textContent = formatted;
+
+    }
+
+
+    function addDemoBalance() {
+
+      let balance =
+        Number(
+          localStorage.getItem(
+            "dropzone_balance"
+          ) || 125000
+        );
+
+      balance += 50000;
+
+      localStorage.setItem(
+        "dropzone_balance",
+        balance
+      );
+
+      location.reload();
+
+    }
+
+
+    function logout() {
+
+      localStorage.removeItem(
+        "dropzone_user"
+      );
+
+      localStorage.removeItem(
+        "dropzone_name"
+      );
+
+      window.location.href =
+        "index.html";
+
+    }
+
+  </script>
+
+</body>
+</html>
