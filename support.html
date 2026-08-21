@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yordam — DropZone</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<aside class="sidebar">
+
+  <div class="logo">
+    DROP<span>ZONE</span>
+  </div>
+
+  <nav>
+    <a href="index.html" class="nav-item">🏠 Bosh sahifa</a>
+    <a href="keys.html" class="nav-item">🎁 Keyslar</a>
+    <a href="games.html" class="nav-item">🎮 O'yinlar</a>
+    <a href="bonuses.html" class="nav-item">🎯 Bonuslar</a>
+    <a href="profile.html" class="nav-item">👤 Profil</a>
+    <a href="support.html" class="nav-item active">💬 Yordam</a>
+  </nav>
+
+</aside>
+
+<main class="main">
+
+<header class="header">
+
+  <a href="index.html" class="mobile-logo">
+    DROP<span>ZONE</span>
+  </a>
+
+  <div class="header-right">
+
+    <a href="profile.html" class="profile-button"
+       style="display:flex;align-items:center;justify-content:center;">
+      👤
+    </a>
+
+  </div>
+
+</header>
+
+<div class="content">
+
+<section class="section">
+
+  <div class="section-header">
+    <div>
+      <small>SUPPORT</small>
+      <h2>Yordam markazi</h2>
+    </div>
+  </div>
+
+
+  <div class="support-grid">
+
+    <div class="support-big-card">
+
+      <div class="support-big-icon">
+        💬
+      </div>
+
+      <h3>Qo'llab-quvvatlash</h3>
+
+      <p>
+        Savollaringiz bo'lsa, biz bilan bog'laning.
+      </p>
+
+      <button
+        class="auth-button"
+        onclick="contactSupport()"
+      >
+        Murojaat yuborish
+      </button>
+
+    </div>
+
+
+    <div class="support-big-card">
+
+      <div class="support-big-icon">
+        📚
+      </div>
+
+      <h3>Ko'p beriladigan savollar</h3>
+
+      <p>
+        Platformadan foydalanish bo'yicha javoblarni
+        shu yerdan topishingiz mumkin.
+      </p>
+
+      <button
+        class="auth-secondary"
+        onclick="faq()"
+      >
+        FAQ ni ko'rish
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <div class="profile-main-card faq-box">
+
+    <h3>
+      Tez-tez beriladigan savollar
+    </h3>
+
+    <details>
+      <summary>Hisobimga qanday kiraman?</summary>
+      <p>Login sahifasi orqali email va parolingizni kiriting.</p>
+    </details>
+
+    <details>
+      <summary>Profil ma'lumotlarini qanday o'zgartiraman?</summary>
+      <p>Profil sozlamalari sahifasidan o'zgartirishingiz mumkin.</p>
+    </details>
+
+    <details>
+      <summary>Keyslar qayerda?</summary>
+      <p>Keyslar bo'limidan mavjud katalogni ko'rishingiz mumkin.</p>
+    </details>
+
+  </div>
+
+</section>
+
+<footer>
+  <div class="footer-logo">DROP<span>ZONE</span></div>
+  <p>© 2026 DropZone</p>
+</footer>
+
+</div>
+</main>
+
+<script>
+
+function contactSupport() {
+  alert(
+    "Demo: support tizimi keyingi bosqichda backend bilan ulanadi."
+  );
+}
+
+function faq() {
+  document
+    .querySelector(".faq-box")
+    .scrollIntoView({
+      behavior: "smooth"
+    });
+}
+
+</script>
+
+</body>
+</html>
