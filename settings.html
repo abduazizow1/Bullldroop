@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sozlamalar — DropZone</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<aside class="sidebar">
+
+  <div class="logo">
+    DROP<span>ZONE</span>
+  </div>
+
+  <nav>
+    <a href="index.html" class="nav-item">🏠 Bosh sahifa</a>
+    <a href="keys.html" class="nav-item">🎁 Keyslar</a>
+    <a href="games.html" class="nav-item">🎮 O'yinlar</a>
+    <a href="bonuses.html" class="nav-item">🎯 Bonuslar</a>
+    <a href="profile.html" class="nav-item">👤 Profil</a>
+    <a href="settings.html" class="nav-item active">⚙️ Sozlamalar</a>
+  </nav>
+
+</aside>
+
+<main class="main">
+
+<header class="header">
+
+  <a href="index.html" class="mobile-logo">
+    DROP<span>ZONE</span>
+  </a>
+
+  <div class="header-right">
+
+    <a href="profile.html" class="profile-button"
+       style="display:flex;align-items:center;justify-content:center;">
+      👤
+    </a>
+
+  </div>
+
+</header>
+
+<div class="content">
+
+<section class="section">
+
+  <div class="section-header">
+    <div>
+      <small>ACCOUNT</small>
+      <h2>Sozlamalar</h2>
+    </div>
+  </div>
+
+
+  <div class="profile-main-card settings-card">
+
+    <div class="setting-row">
+
+      <div>
+        <h3>Profil nomi</h3>
+        <p>Platformadagi ko'rinadigan ismingiz.</p>
+      </div>
+
+      <input
+        id="username"
+        class="setting-input"
+        type="text"
+        placeholder="Ismingiz"
+      >
+
+    </div>
+
+
+    <div class="setting-row">
+
+      <div>
+        <h3>Email</h3>
+        <p>Hisobingizga bog'langan email.</p>
+      </div>
+
+      <input
+        id="email"
+        class="setting-input"
+        type="email"
+        placeholder="email@example.com"
+      >
+
+    </div>
+
+
+    <div class="setting-row">
+
+      <div>
+        <h3>Til</h3>
+        <p>Platforma tilini tanlang.</p>
+      </div>
+
+      <select class="setting-input">
+        <option>O'zbekcha</option>
+        <option>Русский</option>
+        <option>English</option>
+      </select>
+
+    </div>
+
+
+    <button
+      class="auth-button"
+      onclick="saveSettings()"
+    >
+      Saqlash
+    </button>
+
+  </div>
+
+</section>
+
+<footer>
+  <div class="footer-logo">DROP<span>ZONE</span></div>
+  <p>© 2026 DropZone</p>
+</footer>
+
+</div>
+</main>
+
+<script>
+
+const name =
+  localStorage.getItem("dropzone_name");
+
+const email =
+  localStorage.getItem("dropzone_user");
+
+if (name) {
+  document.getElementById("username").value = name;
+}
+
+if (email) {
+  document.getElementById("email").value = email;
+}
+
+function saveSettings() {
+
+  const newName =
+    document.getElementById("username").value;
+
+  const newEmail =
+    document.getElementById("email").value;
+
+  localStorage.setItem(
+    "dropzone_name",
+    newName
+  );
+
+  localStorage.setItem(
+    "dropzone_user",
+    newEmail
+  );
+
+  alert("Sozlamalar saqlandi.");
+
+}
+
+</script>
+
+</body>
+</html>
