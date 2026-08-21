@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>O'yinlar — DropZone</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<aside class="sidebar">
+  <div class="logo">DROP<span>ZONE</span></div>
+
+  <nav>
+    <a href="index.html" class="nav-item">🏠 Bosh sahifa</a>
+    <a href="keys.html" class="nav-item">🎁 Keyslar</a>
+    <a href="games.html" class="nav-item active">🎮 O'yinlar</a>
+    <a href="bonuses.html" class="nav-item">🎯 Bonuslar</a>
+    <a href="profile.html" class="nav-item">👤 Profil</a>
+  </nav>
+</aside>
+
+<main class="main">
+
+<header class="header">
+  <a href="index.html" class="mobile-logo">
+    DROP<span>ZONE</span>
+  </a>
+
+  <div class="header-right">
+    <div class="balance">
+      <span>Balans</span>
+      <b>125 000 UZS</b>
+    </div>
+
+    <a href="profile.html" class="profile-button"
+       style="display:flex;align-items:center;justify-content:center;">
+      👤
+    </a>
+  </div>
+</header>
+
+<div class="content">
+
+<section class="section">
+
+  <div class="section-header">
+    <div>
+      <small>GAMING ZONA</small>
+      <h2>O'yinlar</h2>
+    </div>
+  </div>
+
+  <div class="games-grid">
+
+    <div class="game">
+      <div class="game-icon">🎮</div>
+
+      <div>
+        <h3>Gaming Arena</h3>
+        <p>Mini o'yinlar</p>
+      </div>
+
+      <button onclick="openGame('Gaming Arena')">
+        Kirish
+      </button>
+    </div>
+
+    <div class="game">
+      <div class="game-icon">🏆</div>
+
+      <div>
+        <h3>Challenge</h3>
+        <p>Kunlik topshiriqlar</p>
+      </div>
+
+      <button onclick="openGame('Challenge')">
+        Kirish
+      </button>
+    </div>
+
+    <div class="game">
+      <div class="game-icon">⚡</div>
+
+      <div>
+        <h3>Battle Zone</h3>
+        <p>Reyting tizimi</p>
+      </div>
+
+      <button onclick="openGame('Battle Zone')">
+        Kirish
+      </button>
+    </div>
+
+    <div class="game">
+      <div class="game-icon">🚀</div>
+
+      <div>
+        <h3>Space Arena</h3>
+        <p>Yangi o'yin</p>
+      </div>
+
+      <button onclick="openGame('Space Arena')">
+        Kirish
+      </button>
+    </div>
+
+    <div class="game">
+      <div class="game-icon">🧩</div>
+
+      <div>
+        <h3>Puzzle Zone</h3>
+        <p>Mantiqiy topshiriqlar</p>
+      </div>
+
+      <button onclick="openGame('Puzzle Zone')">
+        Kirish
+      </button>
+    </div>
+
+    <div class="game">
+      <div class="game-icon">🎯</div>
+
+      <div>
+        <h3>Target</h3>
+        <p>Skill challenge</p>
+      </div>
+
+      <button onclick="openGame('Target')">
+        Kirish
+      </button>
+    </div>
+
+  </div>
+
+</section>
+
+<footer>
+  <div class="footer-logo">DROP<span>ZONE</span></div>
+  <p>© 2026 DropZone</p>
+</footer>
+
+</div>
+</main>
+
+<script>
+function openGame(name) {
+  alert(
+    name +
+    "\n\nBu bo'lim hozir demo rejimida."
+  );
+}
+</script>
+
+</body>
+</html>
