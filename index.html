@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>DropZone — Gaming Platform</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- SIDEBAR -->
+
+  <aside class="sidebar" id="sidebar">
+
+    <div class="logo">
+      DROP<span>ZONE</span>
+    </div>
+
+    <nav>
+
+      <a href="#" class="nav-item active">
+        <span>🏠</span>
+        Bosh sahifa
+      </a>
+
+      <a href="#keys" class="nav-item">
+        <span>🎁</span>
+        Keyslar
+      </a>
+
+      <a href="#games" class="nav-item">
+        <span>🎮</span>
+        O'yinlar
+      </a>
+
+      <a href="#bonuses" class="nav-item">
+        <span>🎯</span>
+        Bonuslar
+      </a>
+
+      <a href="#profile" class="nav-item">
+        <span>👤</span>
+        Profil
+      </a>
+
+    </nav>
+
+    <div class="sidebar-bottom">
+
+      <div class="support">
+        <span>💬</span>
+        <div>
+          <b>Yordam kerakmi?</b>
+          <small>Qo'llab-quvvatlash</small>
+        </div>
+      </div>
+
+      <div class="language">
+        🌐 O'zbekcha
+      </div>
+
+    </div>
+
+  </aside>
+
+
+  <!-- MAIN -->
+
+  <main class="main">
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+      <button
+        class="menu-button"
+        onclick="toggleSidebar()"
+      >
+        ☰
+      </button>
+
+      <div class="mobile-logo">
+        DROP<span>ZONE</span>
+      </div>
+
+      <div class="header-right">
+
+        <div class="balance">
+          <span>Balans</span>
+          <b id="balance">125 000 UZS</b>
+        </div>
+
+        <button
+          class="deposit"
+          onclick="openDeposit()"
+        >
+          + To'ldirish
+        </button>
+
+        <button
+          class="profile-button"
+          onclick="showProfile()"
+        >
+          👤
+        </button>
+
+      </div>
+
+    </header>
+
+
+    <!-- CONTENT -->
+
+    <div class="content">
+
+      <!-- HERO -->
+
+      <section class="hero">
+
+        <div class="hero-content">
+
+          <div class="hero-badge">
+            🔥 Yangi kolleksiya
+          </div>
+
+          <h1>
+            Gaming dunyosiga
+            <span>xush kelibsiz</span>
+          </h1>
+
+          <p>
+            O'yinlar, virtual buyumlar va maxsus bonuslarni
+            bitta qulay platformada kashf qiling.
+          </p>
+
+          <div class="hero-buttons">
+
+            <button
+              class="primary-button"
+              onclick="scrollToSection('keys')"
+            >
+              Keyslarni ko'rish →
+            </button>
+
+            <button
+              class="secondary-button"
+              onclick="scrollToSection('games')"
+            >
+              O'yinlar
+            </button>
+
+          </div>
+
+        </div>
+
+        <div class="hero-art">
+          <div class="glow"></div>
+
+          <div class="game-card big-card">
+
+            <div class="card-top">
+              <span>LEGENDARY</span>
+              <span>★</span>
+            </div>
+
+            <div class="weapon">
+              🎮
+            </div>
+
+            <h3>Cyber Collection</h3>
+
+            <div class="rarity">
+              EPIC ITEM
+            </div>
+
+          </div>
+        </div>
+
+      </section>
+
+
+      <!-- PROFILE -->
+
+      <section id="profile" class="section">
+
+        <div class="section-header">
+
+          <div>
+            <small>SHAXSIY KABINET</small>
+            <h2>Profil</h2>
+          </div>
+
+          <button
+            class="outline-button"
+            onclick="showProfile()"
+          >
+            Profilni ochish
+          </button>
+
+        </div>
+
+
+        <div class="profile-grid">
+
+          <div class="profile-card">
+
+            <div class="avatar">
+              DZ
+            </div>
+
+            <div>
+              <h3>Demo User</h3>
+              <p>@dropuser</p>
+            </div>
+
+            <div class="verified">
+              ✓
+            </div>
+
+          </div>
+
+
+          <div class="stat-card">
+
+            <span>Balans</span>
+            <strong id="profileBalance">
+              125 000 UZS
+            </strong>
+
+          </div>
+
+
+          <div class="stat-card">
+
+            <span>Buyurtmalar</span>
+            <strong>
+              24
+            </strong>
+
+          </div>
+
+
+          <div class="stat-card">
+
+            <span>Bonuslar</span>
+            <strong>
+              8
+            </strong>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- KEYS -->
+
+      <section id="keys" class="section">
+
+        <div class="section-header">
+
+          <div>
+            <small>KOLEKSIYALAR</small>
+            <h2>Keyslar</h2>
+          </div>
+
+          <button class="outline-button">
+            Barchasi →
+          </button>
+
+        </div>
+
+
+        <div class="products">
+
+          <div class="product">
+
+            <div class="product-image blue">
+              🎁
+            </div>
+
+            <div class="product-body">
+
+              <span class="tag">
+                STARTER
+              </span>
+
+              <h3>Starter Box</h3>
+
+              <p>
+                Boshlang'ich kolleksiya
+              </p>
+
+              <div class="product-bottom">
+
+                <strong>
+                  15 000 UZS
+                </strong>
+
+                <button onclick="buyItem('Starter Box', 15000)">
+                  Olish
+                </button>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="product">
+
+            <div class="product-image purple">
+              💎
+            </div>
+
+            <div class="product-body">
+
+              <span class="tag purple-tag">
+                PREMIUM
+              </span>
+
+              <h3>Premium Box</h3>
+
+              <p>
+                Premium kolleksiya
+              </p>
+
+              <div class="product-bottom">
+
+                <strong>
+                  35 000 UZS
+                </strong>
+
+                <button onclick="buyItem('Premium Box', 35000)">
+                  Olish
+                </button>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="product">
+
+            <div class="product-image orange">
+              🔥
+            </div>
+
+            <div class="product-body">
+
+              <span class="tag orange-tag">
+                SPECIAL
+              </span>
+
+              <h3>Fire Collection</h3>
+
+              <p>
+                Maxsus kolleksiya
+              </p>
+
+              <div class="product-bottom">
+
+                <strong>
+                  50 000 UZS
+                </strong>
+
+                <button onclick="buyItem('Fire Collection', 50000)">
+                  Olish
+                </button>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- GAMES -->
+
+      <section id="games" class="section">
+
+        <div class="section-header">
+
+          <div>
+            <small>GAMING ZONA</small>
+            <h2>O'yinlar</h2>
+          </div>
+
+        </div>
+
+
+        <div class="games-grid">
+
+          <div class="game">
+
+            <div class="game-icon">
+              🎮
+            </div>
+
+            <div>
+              <h3>Gaming Arena</h3>
+              <p>Mini o'yinlar</p>
+            </div>
+
+            <button onclick="gameInfo('Gaming Arena')">
+              Kirish
+            </button>
+
+          </div>
+
+
+          <div class="game">
+
+            <div class="game-icon">
+              🏆
+            </div>
+
+            <div>
+              <h3>Challenge</h3>
+              <p>Kunlik topshiriqlar</p>
+            </div>
+
+            <button onclick="gameInfo('Challenge')">
+              Kirish
+            </button>
+
+          </div>
+
+
+          <div class="game">
+
+            <div class="game-icon">
+              ⚡
+            </div>
+
+            <div>
+              <h3>Battle Zone</h3>
+              <p>Reyting tizimi</p>
+            </div>
+
+            <button onclick="gameInfo('Battle Zone')">
+              Kirish
+            </button>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- BONUSES -->
+
+      <section id="bonuses" class="section">
+
+        <div class="section-header">
+
+          <div>
+            <small>MAXSUS TAKLIFLAR</small>
+            <h2>Bonuslar</h2>
+          </div>
+
+        </div>
+
+
+        <div class="bonus-grid">
+
+          <div class="bonus">
+
+            <div class="bonus-icon">
+              🎁
+            </div>
+
+            <div>
+              <h3>Welcome Bonus</h3>
+              <p>
+                Yangi foydalanuvchilar uchun maxsus bonus.
+              </p>
+            </div>
+
+            <button onclick="claimBonus()">
+              Olish
+            </button>
+
+          </div>
+
+
+          <div class="bonus">
+
+            <div class="bonus-icon">
+              ⭐
+            </div>
+
+            <div>
+              <h3>Daily Bonus</h3>
+              <p>
+                Har kuni mavjud bo'ladigan bonus.
+              </p>
+            </div>
+
+            <button onclick="claimBonus()">
+              Olish
+            </button>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- FOOTER -->
+
+      <footer>
+
+        <div class="footer-logo">
+          DROP<span>ZONE</span>
+        </div>
+
+        <p>
+          © 2026 DropZone. Barcha huquqlar himoyalangan.
+        </p>
+
+        <div class="footer-links">
+          <a href="#">Telegram</a>
+          <a href="#">Kontaktlar</a>
+          <a href="#">Maxfiylik</a>
+        </div>
+
+      </footer>
+
+    </div>
+
+  </main>
+
+
+  <!-- DEPOSIT MODAL -->
+
+  <div
+    class="modal"
+    id="depositModal"
+  >
+
+    <div class="modal-box">
+
+      <button
+        class="close"
+        onclick="closeDeposit()"
+      >
+        ×
+      </button>
+
+      <h2>Balansni to'ldirish</h2>
+
+      <p>
+        Demo versiyada to'lov tizimi ulanmagan.
+      </p>
+
+      <div class="amounts">
+
+        <button onclick="selectAmount(10000)">
+          10 000
+        </button>
+
+        <button onclick="selectAmount(25000)">
+          25 000
+        </button>
+
+        <button onclick="selectAmount(50000)">
+          50 000
+        </button>
+
+        <button onclick="selectAmount(100000)">
+          100 000
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <script src="app.js"></script>
+
+</body>
+</html>
