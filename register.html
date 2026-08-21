@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ro‘yxatdan o‘tish — DropZone</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="auth-page">
+
+  <div class="auth-box">
+
+    <a href="index.html" class="auth-logo">
+      DROP<span>ZONE</span>
+    </a>
+
+    <h1>Hisob yaratish</h1>
+
+    <p class="auth-desc">
+      Bir necha soniyada yangi hisob yarating.
+    </p>
+
+    <form id="registerForm">
+
+      <label>Ism</label>
+
+      <input
+        id="registerName"
+        type="text"
+        placeholder="Ismingiz"
+        required
+      >
+
+      <label>Email</label>
+
+      <input
+        id="registerEmail"
+        type="email"
+        placeholder="email@example.com"
+        required
+      >
+
+      <label>Parol</label>
+
+      <input
+        id="registerPassword"
+        type="password"
+        placeholder="••••••••"
+        minlength="6"
+        required
+      >
+
+      <button class="auth-button" type="submit">
+        Hisob yaratish
+      </button>
+
+    </form>
+
+    <div class="auth-divider">
+      yoki
+    </div>
+
+    <a href="login.html" class="auth-secondary">
+      Menda hisob bor
+    </a>
+
+    <a href="index.html" class="back-home">
+      ← Bosh sahifaga qaytish
+    </a>
+
+  </div>
+
+  <script>
+
+    document
+      .getElementById("registerForm")
+      .addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        const name =
+          document.getElementById("registerName").value;
+
+        const email =
+          document.getElementById("registerEmail").value;
+
+        localStorage.setItem(
+          "dropzone_name",
+          name
+        );
+
+        localStorage.setItem(
+          "dropzone_user",
+          email
+        );
+
+        localStorage.setItem(
+          "dropzone_balance",
+          "125000"
+        );
+
+        window.location.href =
+          "profile.html";
+
+      });
+
+  </script>
+
+</body>
+</html>
