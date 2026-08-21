@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kirish — DropZone</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="auth-page">
+
+  <div class="auth-box">
+
+    <a href="index.html" class="auth-logo">
+      DROP<span>ZONE</span>
+    </a>
+
+    <h1>Hisobga kirish</h1>
+
+    <p class="auth-desc">
+      Platformadan foydalanish uchun hisobingizga kiring.
+    </p>
+
+    <form id="loginForm">
+
+      <label>Email</label>
+      <input
+        id="loginEmail"
+        type="email"
+        placeholder="email@example.com"
+        required
+      >
+
+      <label>Parol</label>
+      <input
+        id="loginPassword"
+        type="password"
+        placeholder="••••••••"
+        required
+      >
+
+      <button class="auth-button" type="submit">
+        Kirish
+      </button>
+
+    </form>
+
+    <div class="auth-divider">
+      yoki
+    </div>
+
+    <a href="register.html" class="auth-secondary">
+      Yangi hisob yaratish
+    </a>
+
+    <a href="index.html" class="back-home">
+      ← Bosh sahifaga qaytish
+    </a>
+
+  </div>
+
+  <script>
+    document
+      .getElementById("loginForm")
+      .addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        const email =
+          document.getElementById("loginEmail").value;
+
+        localStorage.setItem(
+          "dropzone_user",
+          email
+        );
+
+        window.location.href = "profile.html";
+
+      });
+  </script>
+
+</body>
+</html>
